@@ -4,6 +4,7 @@ from .models import Course
 
 # Create your views here.
 
-class PostList(generic.ListView):
+class CourseList(generic.ListView):
     queryset = Course.objects.filter(status=1)
-    template_name = "base.html"
+    template_name = "index.html"
+    paginate_by = 6

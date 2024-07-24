@@ -1,15 +1,23 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
-    <div class="row">
+    <!-- jumbotron for an introduction message -->
+    <div class="jumbotron jumbotron-img">
+        <div class="welcome-text">
+            <h1>Photograpy Course</h1>
+            <h5>- Everything you need to take your best photos</h5>
+        </div>
+    </div>
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in post_list %}
+                {% for course in Course_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -19,7 +27,7 @@
                                 </div>
                             </div>
                             <a href="#" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
+                                <h2 class="card-title">{{ course.title }}</h2>
                             </a>
 
                             <hr />
